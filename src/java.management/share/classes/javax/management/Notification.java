@@ -307,6 +307,17 @@ public class Notification extends EventObject {
     }
 
     /**
+     * Get the notification timestamp in nanoseconds.
+     *
+     * @return The notification timestamp in nanoseconds.
+     *
+     * @see #setTimeStamp
+     */
+    public long getTimeStampNanos() {
+        return System.nanoTime();
+    }
+
+    /**
      * Set the notification timestamp.
      *
      * @param timeStamp The notification timestamp. It indicates when the notification was generated.
