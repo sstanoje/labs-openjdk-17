@@ -2902,7 +2902,7 @@ jint Threads::create_vm(JavaVMInitArgs* args, bool* canTryAgain) {
     VMThread::create();
     Thread* vmthread = VMThread::vm_thread();
 
-    if (!os::create_thread(vmthread, os::vm_thread, false)) {
+    if (!os::create_thread(vmthread, os::vm_thread, true)) {
       vm_exit_during_initialization("Cannot create VM thread. "
                                     "Out of system resources.");
     }
